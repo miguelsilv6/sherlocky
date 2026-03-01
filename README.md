@@ -49,10 +49,14 @@
 
 ### Docker [Recommended]
 
-- Build the Docker image locally
+- Build the Docker image locally (**include the final `.` context argument**)
 ```bash
-docker build -t sherlocky:local .
+DOCKER_BUILDKIT=1 docker build -t sherlocky:local .
 ```
+
+> [!NOTE]
+> If you run `docker build -t sherlocky:local` without the final `.` (or another context path), Docker will fail with `docker build requires 1 argument`.
+> On newer Docker versions, the legacy builder warning is expected unless BuildKit/buildx is enabled.
 
 - Run the docker image as:
 ```bash
