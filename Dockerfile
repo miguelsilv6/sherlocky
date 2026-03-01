@@ -5,6 +5,7 @@ RUN DEBIAN_FRONTEND="noninteractive" apt-get update && \
       tor \
       build-essential \
       curl \
+      zstd \
       ca-certificates \
       libssl-dev \
       libffi-dev && \
